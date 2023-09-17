@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invulvak</title>
+</head>
+<body>
+  <input type="text" id="name">
+  <button onclick="onRefresh()">Ververs</button>
+  <button onclick="onSave()">Opslaan</button>
+
+  <script>
+function onload() {
+  // Haal de waarde van het tekstvak op
+  var name = document.getElementById("name").value;
+
+  // Sla de waarde van het tekstvak op in de lokale opslag
+  localStorage.setItem("name", name);
+}
+
+function onRefresh() {
+  // Haal de waarde van het tekstvak op uit de lokale opslag
+  var name = localStorage.getItem("name");
+
+  // Stel de waarde van het tekstvak in op de opgehaalde waarde
+  document.getElementById("name").value = name;
+}
+
+function onSave() {
+  // Haal de waarde van het tekstvak op
+  var name = document.getElementById("name").value;
+
+  // Sla de waarde van het tekstvak op in de lokale opslag
+  localStorage.setItem("name", name);
+}
+</script>
+</body>
+</html>
+
